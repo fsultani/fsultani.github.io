@@ -5,7 +5,7 @@
 body {
   font: 100% sans-serif;
   margin: 0em;
-  background-color: #505050;
+  background-color: #fff;
   color: #666;
 }
 
@@ -242,7 +242,7 @@ footer hr {
 
 @media screen and (min-width: 40em) {
   .education {
-    width: 70%;
+    width: 30%;
   }
 }
 
