@@ -91,6 +91,11 @@ section ul li, section ol li {
   line-height: 1.8;
 }
 
+.about-me {
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
 footer {
   margin-bottom: 1em;
   color: #888;
@@ -204,6 +209,19 @@ footer hr {
   }
 }
 
+/* Get in touch */
+.web {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .web {
+    display: inline-block;
+  }
+  .mobile {
+    display: none;
+  }
+}
 
 /* Experience */
 .experience [class*="row"] {
@@ -216,7 +234,7 @@ footer hr {
   margin-bottom: 0;
 }
 
-.experience h2, .experience p {
+.experience h2, .experience h3, .experience p {
   text-align: center;
 }
 
