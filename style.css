@@ -43,7 +43,7 @@ hr {
 
 header {
   background-color: #999;
-  background-image: url(img/background.jpg);
+  background-image: url(background.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -242,7 +242,7 @@ footer hr {
 
 @media screen and (min-width: 40em) {
   .education {
-    width: 30%;
+    width: 70%;
   }
 }
 
