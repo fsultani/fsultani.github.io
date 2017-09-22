@@ -327,3 +327,16 @@ footer hr {
   
 }
 
+/* Contact */
+.web-footer {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .web-footer {
+    display: inline-block;
+  }
+  .mobile-footer {
+    display: none;
+  }
+}
