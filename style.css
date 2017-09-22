@@ -180,6 +180,16 @@ footer hr {
 
 /* -------------------Custom Blocks----------------- */
 
+.section-header {
+  text-align: center;
+}
+
+@media screen and (min-width: 40em) {
+  .section-header {
+    text-align: center;
+  }
+}
+
 /* Gallery */
 
 .gallery [class*="grid-2"], .gallery [class*="grid-3"]  {
