@@ -342,10 +342,20 @@ footer hr {
   display: none;
 }
 
+.hr-mobile-footer {
+  display: none;
+}
+
 @media screen and (min-width: 40em) {
-  .web-footer {
-    display: inline-block;
+  .hr-mobile-footer {
+    display: block;
   }
+
+  .web-footer {
+    display: flex;
+    justify-content: center;
+  }
+
   .mobile-footer {
     display: none;
   }
