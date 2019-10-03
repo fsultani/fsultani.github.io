@@ -358,7 +358,6 @@ footer hr {
   }
 }
 
-
 .feature_inner a {
   text-decoration: none;
   color: inherit;
@@ -368,8 +367,14 @@ footer hr {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 1px 1px 5px #888888;
-  margin: 0 15px;
-  width: 30%;
+  margin: 15px;
+}
+
+@media screen and (min-width: 40em) {
+  .feature_item {
+    width: 30%;
+    margin: 0 15px;
+  }
 }
 
 .feature_item i {
