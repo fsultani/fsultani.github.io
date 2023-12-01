@@ -12,6 +12,14 @@ const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
 
 const canvas = document.getElementById('three-js-container');
 const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
+renderer.setPixelRatio(window.devicePixelRatio);
+const heroImageWrapper = document.querySelector('.hero-image-wrapper');
+
+if (window.innerWidth > 600) {
+  renderer.setSize(heroImageWrapper.clientWidth / 2, heroImageWrapper.clientHeight / 2);
+} else {
+  renderer.setSize(300, 150);
+}
 
 const camera = new THREE.PerspectiveCamera(50, aspect, near, far);
 camera.position.z = 2;
@@ -76,6 +84,8 @@ const technologies = [
 
 technologies.map(technology => {
   const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: document.getElementById(technology) }); 
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(300, 150)
 
   const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   camera.position.z = 2;
