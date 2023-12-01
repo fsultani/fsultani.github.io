@@ -1,80 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset='utf-8' />
   <title>Farid's Resume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--Custom fonts. To improve load times, remove this and update the h1 styling in style.css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap' rel='stylesheet'>
+  <link rel='stylesheet' href='styles.css' type='text/css' />
+  <link rel='shortcut icon' href='favicon.ico'>
 
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="style.css" type="text/css" />
-  <!-- favicon -->
-  <link rel="shortcut icon" href="favicon.ico">
+  <script async src='https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js'></script>
+  <script type='importmap'>
+      {
+        "imports": {
+          "three": "https://unpkg.com/three/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three/examples/jsm/"
+        }
+      }
+    </script>
 </head>
 
 <body>
-  <!-- Header-->
-  <header>
-    <h1>Farid Sultani</h1>
-    <p>Software Engineer</p>
-  </header>
-  <div class="container">
-    <!-- Introduction-->
-    <section class="center">
-      <h1>Welcome!</h1>
-      <p>
-        My name is Farid, and I love to code. I enjoy solving interesting problems, learning, and teaching.
-        <br>
-        I also love automation! Efficiency is key.
-      </p>
-      <p class="web">
-        Want to get in touch? <a href="mailto:faridsultani.ba@gmail.com">faridsultani.ba@gmail.com</a> or <a
-          href="teL:17143234879">(714) 323-4879</a>
-      </p>
-      <p class="mobile">
-        Want to get in touch?<br><a href="mailto:faridsultani.ba@gmail.com">faridsultani.ba@gmail.com</a><br>or <a
-          href="teL:17143234879">(714) 323-4879</a>
-      </p>
-    </section>
-
-    <hr>
-
-    <div class="container">
-      <!--Experience Tables-->
-      <section class="experience">
-        <div class="section-header">
-          <h1>Experience</h1>
+  <section class='hero-container background-green color-white'>
+    <div class='flex hero-wrapper'>
+      <div class='hero-title-wrapper full-width flex flex-direction-column'>
+        <h1 class='main-header'>Hi! I'm Farid</h1>
+        <div class='typing-wrapper'>
+          <h3 class='typing-header'>Experienced with
+            <span class='typing-break-tag'><br></span>
+            <span class='typing'></span>
+          </h3>
         </div>
-        <div class="row">
-          <div class="grid-2">
-            <h2>Front-end Engineer</h2>
-            <h3 style="margin: 5px 0">Songclip</h3>
-            <p>August 2020 – September 2022</p>
+        <script src='typing.js'></script>
+      </div>
+
+      <div class='hero-image-wrapper'>
+        <canvas id='three-js-container'></canvas>
+      </div>
+    </div>
+
+    <div class='ocean'>
+      <div class='wave'></div>
+      <div class='wave'></div>
+      <div class='wave'></div>
+      <div class='wave'></div>
+      <div class='wave'></div>
+    </div>
+  </section>
+
+  <section class='section-container'>
+    <div class='intro'>
+      <h3>I enjoy solving interesting problems, learning, and teaching.</h3>
+      <h3>I also love automation! Efficiency is key.</h3>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class='section-container'>
+    <div class='section-header'>
+      <h1>Experience</h1>
+    </div>
+
+    <div class='timeline'>
+      <div class='timeline-container right-container'>
+        <img src='songclip.jpeg' alt=''>
+        <div class='timeline-text-box'>
+          <h3>Front-end Engineer</h3>
+          <h5>Songclip</h5>
+          <div class='dates-right-container'>
+            <h3>August 2020 &hyphen; September 2022</h3>
           </div>
-          <div class="grid-4">
+          <div class='job-description'>
             <ul>
               <li>Led and managed multiple projects and repositories</li>
-              <li>Built a highly sophisticated, Spotify-like music management tool for customers in the music space</li>
+              <li>Built a highly sophisticated, Spotify-like music management tool for customers in the music space
+              </li>
               <li>Built an industry-leading React admin portal for major music licensors and publishers</li>
               <li>Built a public-facing Next.js app featuring custom music playback functionality</li>
               <li>Built a data visualization admin dashboard using Recharts</li>
               <li>Worked collaboratively with backend developers and product/design teams</li>
               <li>Wrote Cypress (E2E) and Jest/Enzyme tests</li>
-              <li>Used Husky and AWS CodeBuild to run predeployment tests to ensure code quality and functionality</li>
+              <li>Used Husky and AWS CodeBuild to run predeployment tests to ensure code quality and functionality
+              </li>
               <li>Deployed daily or weekly using AWS CodeBuild (GitHub Actions later)</li>
             </ul>
           </div>
+          <span class='right-container-arrow'></span>
         </div>
-        <div class="row">
-          <div class="grid-2">
-            <h2>Software Engineer</h2>
-            <h3 style="margin: 5px 0">ATM.com</h3>
-            <p>October 2019 – March 2020</p>
+      </div>
+
+      <div class='timeline-container left-container'>
+        <img src='atmcom.jpg' alt='' style='border: solid 1px var(--color-green);'>
+        <div class='timeline-text-box'>
+          <h3>Software Engineer</h3>
+          <h5>ATM.com</h5>
+          <div class='dates-left-container'>
+            <h3>October 2019 &hyphen; March 2020</h3>
           </div>
-          <div class="grid-4">
+          <div class='job-description'>
             <ul>
               <li>Full stack software engineer using React, Node.js, and Postgres</li>
               <li>Built the atm.com web app with a very strong focus on mobile clients and responsive design</li>
@@ -84,14 +108,19 @@
               <li>Translated Adobe XD and Zeplin mockups into pixel-perfect responsive pages</li>
             </ul>
           </div>
+          <span class='left-container-arrow'></span>
         </div>
-        <div class="row">
-          <div class="grid-2">
-            <h2>Software Engineer</h2>
-            <h3 style="margin: 5px 0">Aspiration</h3>
-            <p>October 2018 – August 2019</p>
+      </div>
+
+      <div class='timeline-container right-container'>
+        <img src='aspiration.jpg' alt=''>
+        <div class='timeline-text-box'>
+          <h3>Software Engineer</h3>
+          <h5>Aspiration</h5>
+          <div class='dates-right-container'>
+            <h3>October 2018 &hyphen; August 2019</h3>
           </div>
-          <div class="grid-4">
+          <div class='job-description'>
             <ul>
               <li>Front-end software engineer in the fintech space using React, Preact, and AngularJS</li>
               <li>Built highly performant, customer-facing marketing landers in Preact to support high traffic pages
@@ -104,195 +133,192 @@
               <li>Shipped daily/weekly</li>
             </ul>
           </div>
-        </div>
-        <div class="row">
-          <div class="grid-2">
-            <h2>Software Engineer I</h2>
-            <h3 style="margin: 5px 0">Acorns</h3>
-            <p>September 2016 - September 2018</p>
-          </div>
-          <div class="grid-4">
-            <ul>
-              <li>Recipient of the Evergreen award for continuous improvements and growth</li>
-              <li>Use recompose to help increase maintainability and clarity of code through composition</li>
-              <li>Improved CodeClimate test coverage by ~80%</li>
-              <li>Designed, developed, and tested UI in React for internal use</li>
-              <li>Improved internal admin tooling (writeen in Ruby on Rails); used JS/Bash for automation</li>
-              <li>Developed HTML/CSS emails with Handlebars.js and grunt; developed iOS and Android in-app messages</li>
-              <li>Developed in-app messages for use on iOS and Android clients</li>
-              <li>Strong sense of visual design</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="row">
-            <div class="grid-2">
-              <h2>Investor Success Representative</h2>
-              <h3 style="margin: 5px 0">Acorns</h3>
-              <p>July 2015 - September 2016</p>
-            </div>
-            <div class="grid-4">
-              <ul>
-                <li>Employee of the Month (“Top Squirrel”) for 4 months with weekly awards for exceptional performance
-                </li>
-                <li>Efficiency as high as ~40% above departmental average</li>
-                <li>Efficiency best practices improved overall departmental productivity by as much as 80%</li>
-                <li>Consistently a top performer in case count, efficiency score, and customer satisfaction score</li>
-                <li>Consistently contributing to departmental best practices and helping to improve overall efficiency
-                </li>
-                <li>Improved email functionality and overall UX using SalesForce CRM by modifying HTML source code,
-                  including improved CTA</li>
-                <li>Provide exceptional customer service as the point of user contact for all inquires, concerns, and
-                  product requests via phone and email</li>
-                <li>Troubleshoot accounts for technical issues and relay feedback to engineering team for bugs and
-                  performance improvements</li>
-                <li>Promoted to junior software engineer</li>
-              </ul>
-            </div>
-          </div>
-      </section>
-    </div>
-
-    <hr>
-
-    <div class="container">
-      <!-- Testimonials-->
-      <section class="testimonial">
-        <div class="row">
-          <div class="section-header">
-            <h2>Recommendations</h2>
-          </div>
-          <div class="testimonial-wrapper">
-            <h3 class="testimonial-header">Jonathan Tate</h3>
-            <h5 class="testimonial-subheader">Director of Customer Support at Fair.com</h5>
-            <p>
-              I had the privilege of managing Farid at Acorns while he was an Investor Success Representative. Farid has
-              a humble attitude and team first approach which made it easy to maintain open dialogue for feedback and
-              brainstorming. He quickly became one of my goto players, often using his computer savvy to finding more
-              efficient ways to resolve issues.
-              Farid would often stay late to study and improve his coding, often taking additional work home. His drive
-              is second to none and his approachable and teachable attitude make him an asset for any team.
-            </p>
-          </div>
-          <div class="testimonial-wrapper">
-            <h3 class="testimonial-header">Sara Richman</h3>
-            <h5 class="testimonial-subheader">Talent Acquisition @ Amazon</h5>
-            <p>
-              Farid is the type of person who knows how to get the job done. He does his research thoroughly and will
-              not stop until his project is finished. His tenacity is inspiring. Farid is extremely detail-oriented,
-              keeping his eye out for any mistakes or sloppiness. This is key to any company because most people do not
-              have the eye for perfection like Farid does. He also has the motivation and desire to learn, which is
-              essential for success in any project he undertakes. I would recommend Farid as a positive asset for any
-              type of company because they would invest upon an employee who is diligent, optimistic and tenacious.
-            </p>
-          </div>
-          <div class="testimonial-wrapper">
-            <h3 class="testimonial-header">Elizabeth Wahler</h3>
-            <h5 class="testimonial-subheader">CEO - KiereMedia</h5>
-            <p>
-              Working with Farid on data driven projects was a pleasure -- he has a great attitude, is extremely
-              talented with excel and possesses strong creative problem solving ability. He is good candidate for an
-              analytical type of position dealing with large amounts of data.
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <hr>
-
-    <div class="container">
-      <section>
-        <!--List of skills-->
-    
-        <div class="grid-container">
-          <div></div>
-          <div class="grid-item-title">
-            <h1>Skills</h1>
-          </div>
-          <div></div>
-          <div class="grid-item">Javascript</div>
-          <div class="grid-item">TypeScript</div>
-          <div class="grid-item">React</div>
-          <div class="grid-item">GraphQL</div>
-          <div class="grid-item">Apollo Client</div>
-          <div class="grid-item">Redux</div>
-          <div class="grid-item">Husky</div>
-          <div class="grid-item">Prettier</div>
-          <div class="grid-item">MongoDB</div>
-          <div class="grid-item">Node.js</div>
-          <div class="grid-item">Express</div>
-          <div class="grid-item">Handlebars</div>
-          <div class="grid-item">Git/GitHub</div>
-          <div class="grid-item">AWS</div>
-          <div class="grid-item">@emotion</div>
-          <div class="grid-item">styled-components</div>
-          <div class="grid-item">Ant Design</div>
-          <div class="grid-item">HTML</div>
-          <div class="grid-item">CSS</div>
-          <div class="grid-item">Jest/Enzyme</div>
-          <div class="grid-item">Cypress</div>
-        </div>
-      </section>
-    </div>
-
-    <hr>
-
-    <!-- <section class="feature_area p_120">
-      <div class="container">
-        <div class="main_title">
-          <h2>Work Samples</h2>
-          <p>Source code for each project is available at <a
-              href="https://github.com/fsultani">https://github.com/fsultani</a></p>
-          <small>Note: since these apps are hosted on Heroku, initial page render may take some time while the server boots
-            up</small>
-        </div>
-        <div class="feature_inner row">
-          <div class="feature_item">
-            <a href="https://farids-weather-app.herokuapp.com" target="_blank">
-              <h4>Weather App</h4>
-              <p>A simple React app using Redux that shows the local weather, or the weather for a specific zip code.</p>
-            </a>
-          </div>
-          <div class="feature_item">
-            <a href="https://chat-app-by-farid.herokuapp.com" target="_blank">
-              <h4>Chat App</h4>
-              <p>A real-time chat app where multiple users can chat with each other in real time. Data is stored locally, so
-                if the page is refreshed, all data will be lost.</p>
-            </a>
-          </div>
-          <div class="feature_item">
-            <a href="https://bitcoin-address.herokuapp.com" target="_blank">
-              <h4>Bitcoin App</h4>
-              <p>A React app that shows the current value of a bitcoin address. Information includes the total received,
-                total sent, and final balance.</p>
-            </a>
-          </div>
+          <span class='right-container-arrow'></span>
         </div>
       </div>
-    </section> -->
+    </div>
+  </section>
 
-    <div class="section">
-      <div class="section-header">
+  <hr>
+
+  <section class='section-container'>
+    <div class='testimonial'>
+      <div class='section-header'>
+        <h1>Recommendations</h1>
+      </div>
+
+      <div class='testimonial-container'>
+        <div class='testimonial-wrapper'>
+          <h3 class='testimonial-header'>Jonathan Tate</h3>
+          <h5 class='testimonial-subheader'>Director of Customer Support at Fair.com</h5>
+          <p>
+            I had the privilege of managing Farid at Acorns while he was an Investor Success Representative. Farid has
+            a humble attitude and team first approach which made it easy to maintain open dialogue for feedback and
+            brainstorming. He quickly became one of my goto players, often using his computer savvy to finding more
+            efficient ways to resolve issues.
+            Farid would often stay late to study and improve his coding, often taking additional work home. His drive
+            is second to none and his approachable and teachable attitude make him an asset for any team.
+          </p>
+        </div>
+        <div class='testimonial-wrapper'>
+          <h3 class='testimonial-header'>Sara Richman</h3>
+          <h5 class='testimonial-subheader'>Talent Acquisition @ Amazon</h5>
+          <p>
+            Farid is the type of person who knows how to get the job done. He does his research thoroughly and will
+            not stop until his project is finished. His tenacity is inspiring. Farid is extremely detail-oriented,
+            keeping his eye out for any mistakes or sloppiness. This is key to any company because most people do not
+            have the eye for perfection like Farid does. He also has the motivation and desire to learn, which is
+            essential for success in any project he undertakes. I would recommend Farid as a positive asset for any
+            type of company because they would invest upon an employee who is diligent, optimistic and tenacious.
+          </p>
+        </div>
+        <div class='testimonial-wrapper'>
+          <h3 class='testimonial-header'>Elizabeth Wahler</h3>
+          <h5 class='testimonial-subheader'>CEO - KiereMedia</h5>
+          <p>
+            Working with Farid on data driven projects was a pleasure -- he has a great attitude, is extremely
+            talented with excel and possesses strong creative problem solving ability. He is good candidate for an
+            analytical type of position dealing with large amounts of data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class='section-container'>
+    <div class='section-header'>
+      <h1>Skills</h1>
+    </div>
+
+    <div class='grid-container'>
+      <div class='grid-item'>
+        <canvas id='javascript'></canvas>
+        <p>Javascript</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='typescript'></canvas>
+        <p>TypeScript</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='react'></canvas>
+        <p>React</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='graphql'></canvas>
+        <p>GraphQL</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='apolloclient'></canvas>
+        <p>Apollo Client</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='redux'></canvas>
+        <p>Redux</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='mongodb'></canvas>
+        <p>MongoDB</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='nodejs'></canvas>
+        <p>Node.js</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='expressjs'></canvas>
+        <p>Express.js</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='emotion'></canvas>
+        <p>@emotion</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='antdesign'></canvas>
+        <p>Ant Design</p>
+      </div>
+      <div class='grid-item'>
+        <canvas id='cypress'></canvas>
+        <p>Cypress</p>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class='section-container'>
+    <div class='section-header'>
+      <h1>Additional Skills</h1>
+    </div>
+
+    <div class='ticker-wrapper'>
+      <div class='ticker-items'>
+        <div class='ticker-item'>
+          <img src='husky.png' alt=''>
+          <p>Husky</p>
+        </div>
+        <div class='ticker-item'>
+          <img src='prettier.png' alt=''>
+          <p>Prettier</p>
+        </div>
+        <div class='ticker-item'>
+          <img src='handlebarsjs.png' alt=''>
+          <p>Handlebars</p>
+        </div>
+        <div class='ticker-item'>
+          <img src='github.png' alt=''>
+          <p>Git/GitHub</p>
+        </div>
+        <div class='ticker-item'>
+          <img src='aws.png' alt=''>
+          <p>AWS</p>
+        </div>
+        <div class='ticker-item'>
+          <img src='styled-components.png' alt=''>
+          <p>styled-components</p>
+        </div>
+        <div class='ticker-item'>
+          <img src='html.png' alt=''>
+          <p>HTML</p>
+        </div>
+        <div class='ticker-item'>
+          <img src='css.png' alt=''>
+          <p>CSS</p>
+        </div>
+        <div class='ticker-item'>
+          <img src='jest.png' alt=''>
+          <p>Jest/Enzyme</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class='section-container'>
+    <div class='education-section-wrapper'>
+      <div class='section-header'>
         <h1>Education</h1>
       </div>
-      <section class="education">
-        <h2 style="margin: 0">Bachelor of Arts in Mathematics</h2>
-        <h3 style="margin: 0">Business Administration Minor</h3>
-        <h5 style="margin-top: 10px">California State University, Fullerton</h5>
+      <section class='education'>
+        <h5 class='education-major'>Bachelor of Arts in Mathematics</h5>
+        <p class='education-minor'>Business Administration Minor</p>
+        <p class='education-university'>California State University, Fullerton</p>
       </section>
     </div>
-    <!--Footer-->
-    <footer class="center mobile-footer">
-      <hr>
-      <p>
-        <span style="font-weight: 600">Contact</span>
-        <a href="mailto:faridsultani.ba@gmail.com">faridsultani.ba@gmail.com</a>
-        <a href="teL:17143234879">714.323.4879</a>
-      </p>
-    </footer>
+  </section>
+
+  <hr>
+
+  <footer class='section-container footer'>
+    <p>
+      <span style='font-weight: 600'>Get in touch:</span>
+      <a href='mailto:faridsultani.ba@gmail.com'>faridsultani.ba@gmail.com</a>
+    </p>
+  </footer>
   </div>
 
+  <script type='module' src='/three.js'></script>
 </body>
 
 </html>
